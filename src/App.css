@@ -40,6 +40,10 @@
   margin-bottom: 40px;
 }
 
+.img {
+  width: 260px;
+}
+
 .content button {
   width: 100%;
   padding: 10px;
