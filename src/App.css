@@ -1,38 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Gupter:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --blue: #060a90;
+  --white: #fff;
+  --pink: #fdd4d4;
+  --red: #f42829;
+  --gray: #4a4755;
+  --f9: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content_head h1 {
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--blue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content img {
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.content button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blue);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transition: background-color 0.3s;
 }
