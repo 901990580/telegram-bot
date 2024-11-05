@@ -20,19 +20,23 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  max-width: 500px;
+  margin: auto;
 }
 
 .content {
-  max-width: 500px;
-  margin: auto;
-  padding: 15px;
   text-align: center;
+  padding: 15px;
 }
 
 .content_head h1 {
   font-weight: 800;
   font-size: 36px;
   color: var(--blue);
+}
+
+.content_head img {
+  width: 200px;
 }
 
 .content img {
@@ -50,8 +54,7 @@
   font-size: 20px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: var(--blue);
   color: white;
-  transition: background-color 0.3s;
 }
