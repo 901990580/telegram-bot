@@ -1,25 +1,157 @@
-.home {
-    padding: 20px;
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    background-color: #f9f9f9; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-  }
-  
-  button {
-    width: 100%; 
-    padding: 10px; 
-    margin: 5px 0; 
-    font-size: 16px;
-    cursor: pointer; 
-    border: none; 
-    border-radius: 5px; 
-    background-color: #060A90; 
-    color: white;
-    transition: background-color 0.3s; 
-  }
-  
-  button:hover {
-    background-color: #060A90; 
-  }
-  
+.menu {
+  background-color: rgb(250, 249, 249);
+  padding: 24px;
+}
+.menu > h4 {
+  font-weight: 700;
+  font-size: 14px;
+}
+.menu > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.cart_dis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart_dis > svg {
+  color: var(--blue);
+}
+.cart_dis > h3 {
+  margin-bottom: 12px;
+}
+.cart > img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.cart_2 > img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--blue);
+  background-color: #010520;
+}
+.cart_3 > img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.cart_4 {
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+iframe {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+.cont {
+  background-color: var(--white);
+  margin-top: 81px;
+}
+
+.cart_5 {
+  padding: 24px;
+}
+.cart_5 > h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.cart_5 > p {
+  font-size: 14px;
+  font-weight: 400;
+}
+form {
+  background-color: rgb(249, 249, 250);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e9e9ea;
+}
+.contact > select {
+  border-radius: 12px;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #e9e9ea;
+  width: 100%;
+  outline: none;
+  /* padding-bottom: 16px; */
+}
+.textField {
+  width: 100%;
+}
+
+.MuiFormControl-root,
+.MuiInputBase-root {
+  border-radius: 12px !important;
+  font-size: 18px;
+  /* padding: 10px; */
+  border: 1px solid #e9e9ea;
+}
+
+.textField input {
+  border-radius: 30px !important;
+}
+.contact > button {
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.buttons_bar {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(187, 186, 191);
+  padding: 10px;
+  border-radius: 20px;
+}
+.buttons_bar > button {
+  padding: 5px;
+  font-size: 16px;
+  color: rgb(187, 186, 191);
+  background-color: white;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+footer {
+  margin-top: 30px;
+  color: var(--blue);
+}
+
+.footer_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer_icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer_icons svg {
+  padding: 8px;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  font-size: 44px;
+}

@@ -2,18 +2,19 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import logo from "./assets/logo 1.jpg";
 import animation from "./assets/animation.gif";
-import Menu from "./Menu";
 import { Button } from "@mui/material";
 // ? import aos
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Home from "./pages/home/Home";
+import Lesson from "./pages/lesson/Lesson";
 
 function App() {
   let navigate = useNavigate();
 
-  function menuFunc() {
-    navigate("/menu");
+  function homeFunc() {
+    navigate("/home");
   }
 
   useEffect(() => {
@@ -33,13 +34,14 @@ function App() {
                 <img src={logo} alt="" />
               </div>
               <img className="img" src={animation} alt="" />
-              <Button variant="contained" onClick={menuFunc}>
+              <Button variant="contained" onClick={homeFunc}>
                 Let's Start
               </Button>
             </div>
           }
         />
-        <Route path="/menu" element={<Menu />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/lesson" element={<Lesson />}/>  
       </Routes>
     </div>
   );
