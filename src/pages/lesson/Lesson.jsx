@@ -8,44 +8,52 @@ import "./lesson.css";
 
 const Lesson = () => {
   return (
-    <div className="lesson">
-      <div className="lesson_header">
-        <h2>Home</h2>
-        <button>
-          <img src={lesson_img} alt="" />
-        </button>
-      </div>
-
-      <div className="courses">
-        <div className="top_courses">
-          <div className="courses_display">
-            <h4>Standard Courses</h4>
-            <p>
-              <IoIosArrowForward />
-            </p>
-          </div>
-          <img className="top_courses_img" src={top_courses_img} alt="" />
-          <div className="top_courses_p">
-            <p className="p">Introduction to standard courses</p>
-            <p>
-              <FaStar /> <span>4.9</span>
-            </p>
-          </div>
+    <div
+      className="container"
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
+    >
+      <div className="lesson">
+        <div className="lesson_header">
+          <h2>Home</h2>
+          <button>
+            <img src={lesson_img} alt="" />
+          </button>
         </div>
 
-        <div className="bottom_courses">
-          <div className="courses_display">
-            <h4>Intensive Courses</h4>
-            <p>
-              <IoIosArrowForward />
-            </p>
+        <div className="courses">
+          <div className="top_courses">
+            <div className="courses_display">
+              <h4>Standard Courses</h4>
+              <p>
+                <IoIosArrowForward />
+              </p>
+            </div>
+            <img className="top_courses_img" src={top_courses_img} alt="" />
+            <div className="top_courses_p">
+              <p className="p">Introduction to standard courses</p>
+              <p>
+                <FaStar /> <span>4.9</span>
+              </p>
+            </div>
           </div>
-          <img className="top_courses_img" src={javascript} alt="" />
-          <div className="top_courses_p">
-            <p className="p">Introduction to intensive courses</p>
-            <p>
-              <FaStar /> <span>4.9</span>
-            </p>
+
+          <div className="bottom_courses">
+            <div className="courses_display">
+              <h4>Intensive Courses</h4>
+              <p>
+                <IoIosArrowForward />
+              </p>
+            </div>
+            <img className="top_courses_img" src={javascript} alt="" />
+            <div className="top_courses_p">
+              <p className="p">Introduction to intensive courses</p>
+              <p>
+                <FaStar /> <span>4.9</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
