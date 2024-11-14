@@ -37,7 +37,6 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form validation logic (you can expand this)
     if (!formData.fullname || !formData.phone || !formData.course) {
       alert("Please fill in all fields!");
     } else {
@@ -60,7 +59,7 @@ const Home = () => {
   };
 
   const ArFunc = () => {
-    navigate("/Ar");
+    navigate("/ArLink");
   };
 
   const LocationFunc = () => {
@@ -107,7 +106,7 @@ const Home = () => {
               <h3>Ar Link</h3>
               <IoIosArrowForward />
             </div>
-            <img src={link} alt="AR Link" />
+            <img src={link} alt="AR Link" onClick={ArFunc}/>
           </div>
 
           {/* /contact */}

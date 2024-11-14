@@ -1,0 +1,123 @@
+/* Main result container */
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.result_dis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: transparent;
+  border: 1px solid #D2D1D4;
+  padding: 7px;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.result_dis h3 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Container for the course cards */
+.result_div1 {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.result_div2 {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on each course card */
+
+.standartCourses {
+  position: relative;
+}
+
+.image2 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart_standart {
+  padding: 15px;
+}
+
+.cart_standart h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.i_bar {
+  display: flex;
+  align-items: center;
+  color: #ffd700;
+}
+
+.i_bar h4 {
+  margin-left: 5px;
+  font-size: 1.1rem;
+}
+
+.result_div3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+}
+
+.result_div3 div {
+  display: flex;
+  align-items: center;
+}
+
+.result_div3 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.result_div3 p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.result_div3 h3 {
+  font-size: 1.2rem;
+  color: #2c9dd1;
+  font-weight: bold;
+}
+
+.no-courses-message {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}

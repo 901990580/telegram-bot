@@ -1,0 +1,142 @@
+.location {
+  max-width: 500px;
+  margin: auto;
+  padding: 16px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div1 {
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div1 > p {
+  border: 1px solid rgb(153, 152, 156);
+  padding: 9px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div2 {
+  padding: 24px;
+  overflow: hidden; 
+}
+
+.location_div3 {
+    text-align: center;
+}
+
+.location_div3 > img {
+  width: 125px;
+  border-radius: 50%;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div3 > h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px 0px 8px 0px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div3 > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div4 {
+  padding: 23px 0px;
+  text-align: left;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div4 > h4 {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 12px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div4 > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div5 > h3 {
+  text-align: left;
+  padding-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div5 > div {
+  border: 1px solid rgb(171, 169, 177);
+  border-radius: 12px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div6 {
+  text-align: left;
+  padding: 0px 0px 12px 12px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div6 > h3 {
+  color: var(--aqua);
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div7 > p {
+  text-align: left;
+  padding: 24px 0px 12px 0px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.location_div7 > h3 {
+  text-align: left;
+  padding: 12px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden; /* Skrollni yo'qotish */
+}
+
+.di {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden; /* Skrollni yo'qotish */
+  margin: 0px 16px;
+}
+
+.diis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bg-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Skrollni yo'qotish */
+  scroll-snap-align: start;
+}
+
+.bg-image > img {
+  width: 435px;
+  overflow: hidden; /* Skrollni yo'qotish */
+}

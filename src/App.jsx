@@ -9,6 +9,10 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Home from "./pages/home/Home";
 import Lesson from "./pages/lesson/Lesson";
+import Standard from "./pages/standard/Standard";
+import Courses from "./pages/courses/Courses";
+import TeacherAbout from "./pages/teacherAbout/TeacherAbout";
+import ArLink from "./pages/arlink/ArLink";
 
 function App() {
   let navigate = useNavigate();
@@ -41,7 +45,11 @@ function App() {
           }
         />
         <Route path="/home" element={<Home />} />
-        <Route path="/lesson" element={<Lesson />}/>  
+        <Route path="/lesson" element={<Lesson />} />
+        <Route path="/standard" element={<Standard />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/teacherAbout" element={<TeacherAbout />} />
+        <Route path="/arLink" element={<ArLink />}/>
       </Routes>
     </div>
   );
