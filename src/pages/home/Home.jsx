@@ -8,10 +8,8 @@ import { Button } from "@mui/material";
 // ? react icons
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaTelegramPlane, FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 // ? import img
 import home_1 from "../../assets/menu_1.jpg";
 import home_2 from "../../assets/menu_2.jpeg";
@@ -71,13 +69,7 @@ const Home = () => {
   };
 
   return (
-    <div
-      className="container"
-      data-aos="fade-left"
-      data-aos-anchor="#example-anchor"
-      data-aos-offset="500"
-      data-aos-duration="500"
-    >
+    <div className="container">
       {/* ? imgs texts */}
       <div className="menu">
         <h4>Hello!</h4>
@@ -90,7 +82,7 @@ const Home = () => {
               <h3>About Us</h3>
               <IoIosArrowForward />
             </div>
-            <img src={home_1} alt="About Us" />
+            <img src={home_1} alt="About Us" onClick={AboutUsFunc} />
           </div>
           {/* ? courses */}
           <div className="cart_2 cart">
@@ -106,7 +98,7 @@ const Home = () => {
               <h3>Ar Link</h3>
               <IoIosArrowForward />
             </div>
-            <img src={link} alt="AR Link" onClick={ArFunc}/>
+            <img src={link} alt="AR Link" onClick={ArFunc} />
           </div>
 
           {/* /contact */}
@@ -127,6 +119,7 @@ const Home = () => {
                 onChange={handleChange}
                 placeholder="Full name"
                 required
+                aria-label="Full name"
               />
               <br />
               <br />
@@ -143,6 +136,7 @@ const Home = () => {
                 required
                 pattern="[0-9]{9,13}"
                 title="Please enter a valid phone number"
+                aria-label="Phone number"
               />
               <br />
               <br />
@@ -153,6 +147,7 @@ const Home = () => {
                 value={formData.course}
                 onChange={handleChange}
                 required
+                aria-label="Select a course"
               >
                 <option value="" disabled>
                   Choose a course
@@ -184,8 +179,8 @@ const Home = () => {
             <p>Vokzal IT TAT</p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.762151677482!2d66.92396777544492!3d39.67756460029653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d19d54b324835%3A0xdf389d78adb91db2!2sIT%20TAT!5e0!3m2!1sru!2s!4v1730894013647!5m2!1sru!2s"
-              width={`100%`}
-              height={`auto`}
+              width="100%"
+              height="auto"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -197,7 +192,7 @@ const Home = () => {
       {/* ? Footer */}
       <footer>
         <div className="footer_1">
-          <img src={logo} alt="" />
+          <img src={logo} alt="Logo" />
           <div className="footer_icons">
             <FaYoutube />
             <AiFillInstagram />

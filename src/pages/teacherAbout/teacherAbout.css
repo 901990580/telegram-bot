@@ -1,142 +1,173 @@
-.location {
-  max-width: 500px;
-  margin: auto;
-  padding: 16px;
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div1 {
-  padding: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--white);
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div1 > p {
-  border: 1px solid rgb(153, 152, 156);
-  padding: 9px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div2 {
+/* General Layout */
+.teacher-about-container {
   padding: 24px;
-  overflow: hidden; 
 }
 
-.location_div3 {
-    text-align: center;
+/* Header */
+.teacher-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-.location_div3 > img {
-  width: 125px;
+.teacher-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--blue);
+}
+
+/* Teacher Info */
+.teacher-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.teacher-photo {
+  text-align: center;
+}
+
+.teacher-photo img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  overflow: hidden; /* Skrollni yo'qotish */
+  object-fit: cover;
+  border: 3px solid #ddd;
 }
 
-.location_div3 > h3 {
+.teacher-photo h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 15px;
+  color: #333;
+}
+
+.teacher-photo p {
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Teacher Experience */
+.teacher-experience h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.teacher-experience p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Courses Section */
+.teacher-courses {
+  margin-top: 10px;
+}
+
+.teacher-courses h3 {
   font-size: 20px;
   font-weight: 700;
-  padding: 16px 0px 8px 0px;
-  overflow: hidden; /* Skrollni yo'qotish */
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.location_div3 > p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--gray);
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div4 {
-  padding: 23px 0px;
-  text-align: left;
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div4 > h4 {
-  font-size: 16px;
-  font-weight: 700;
-  padding-bottom: 12px;
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div4 > p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--gray);
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div5 > h3 {
-  text-align: left;
-  padding-bottom: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div5 > div {
-  border: 1px solid rgb(171, 169, 177);
+.course-card {
+  background-color: white;
   border-radius: 12px;
-  overflow: hidden; /* Skrollni yo'qotish */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.location_div6 {
-  text-align: left;
-  padding: 0px 0px 12px 12px;
-  overflow: hidden; /* Skrollni yo'qotish */
+.course-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.location_div6 > h3 {
-  color: var(--aqua);
-  overflow: hidden; /* Skrollni yo'qotish */
+.course-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.location_div7 > p {
-  text-align: left;
-  padding: 24px 0px 12px 0px;
-  overflow: hidden; /* Skrollni yo'qotish */
-}
-
-.location_div7 > h3 {
-  text-align: left;
-  padding: 12px 0px;
-  font-size: 16px;
+.course-info h2 {
+  color: var(--blue);
+  font-size: 20px;
   font-weight: 700;
-  overflow: hidden; /* Skrollni yo'qotish */
+  margin-bottom: 8px;
 }
 
-.di {
+.course-rating {
   display: flex;
   align-items: center;
-  gap: 10px;
-  overflow: hidden; /* Skrollni yo'qotish */
-  margin: 0px 16px;
+  margin-top: 5px;
+  color: #ffd700;
 }
 
-.diis {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.course-rating span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #615e69;
+  margin-left: 5px;
 }
 
-.bg-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Skrollni yo'qotish */
-  scroll-snap-align: start;
+.course-price h3 {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #18ba92;
 }
 
-.bg-image > img {
-  width: 435px;
-  overflow: hidden; /* Skrollni yo'qotish */
+.teacher-projects h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-info h2 {
+  font-size: 16px;
+  padding: 5px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.project-info p {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px;
+  color: #666;
+  line-height: 20px;
+  margin-top: 10px;
 }

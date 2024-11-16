@@ -4,6 +4,8 @@
   padding: 20px;
   background-color: #f9f9f9;
 }
+
+/* Header section with back button and course title */
 .result_dis {
   display: flex;
   align-items: center;
@@ -13,13 +15,17 @@
 
 .back-button {
   background-color: transparent;
-  border: 1px solid #D2D1D4;
+  border: 1px solid #d2d1d4;
   padding: 7px;
-  align-items: center;
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
   color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e5e5e5;
 }
 
 .result_dis h3 {
@@ -29,28 +35,33 @@
   margin: 0;
 }
 
-/* Container for the course cards */
+/* Responsive grid layout for course cards */
 .result_div1 {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(250px, 1fr)
-  ); /* Responsive grid */
+  ); /* Automatically adjusts based on screen size */
   gap: 20px;
   margin-top: 20px;
 }
 
+/* Individual course card styling */
 .result_div2 {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover effect on each course card */
+.result_div2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
 
+/* Course image and description */
 .standartCourses {
   position: relative;
 }
@@ -63,32 +74,38 @@
 }
 
 .cart_standart {
-  padding: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cart_standart h2 {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 10px;
+  color: #060a90;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
-.i_bar {
+.cart_standart .i_bar {
   display: flex;
   align-items: center;
-  color: #ffd700;
+  color: #ffd700; /* Gold color for star rating */
 }
 
-.i_bar h4 {
-  margin-left: 5px;
-  font-size: 1.1rem;
+.cart_standart .i_bar span {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #615e69;
 }
 
+/* Teacher and price info section */
 .result_div3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: #f1f1f1;
 }
 
 .result_div3 div {
@@ -105,19 +122,13 @@
 }
 
 .result_div3 p {
-  font-size: 1rem;
-  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0f0d15;
 }
 
 .result_div3 h3 {
-  font-size: 1.2rem;
-  color: #2c9dd1;
-  font-weight: bold;
-}
-
-.no-courses-message {
-  font-size: 1.2rem;
-  color: #888;
-  text-align: center;
-  margin-top: 20px;
+  font-weight: 800;
+  font-size: 18px;
+  color: #18ba92;
 }

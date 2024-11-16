@@ -17,28 +17,30 @@ import ArLink from "./pages/arlink/ArLink";
 function App() {
   let navigate = useNavigate();
 
-  function homeFunc() {
+  // Bu yerda nomni aniqroq qilib o'zgartirish mumkin
+  function goToHome() {
     navigate("/home");
   }
 
   useEffect(() => {
     AOS.init();
+    // DOM o'zgarganida AOS'ni yangilash
     AOS.refresh();
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" data-aos="zoom-in-up">
       <Routes>
         <Route
           path="/"
           element={
-            <div className="content" data-aos="zoom-in-up">
+            <div className="content">
               <div className="content_head">
-                <h1>Welcome! </h1>
-                <img src={logo} alt="" />
+                <h1>Welcome!</h1>
+                <img src={logo} alt="Logo" />
               </div>
-              <img className="img" src={animation} alt="" />
-              <Button variant="contained" onClick={homeFunc}>
+              <img className="img" src={animation} alt="animation" />
+              <Button variant="contained" onClick={goToHome}>
                 Let's Start
               </Button>
             </div>
@@ -49,7 +51,7 @@ function App() {
         <Route path="/standard" element={<Standard />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/teacherAbout" element={<TeacherAbout />} />
-        <Route path="/arLink" element={<ArLink />}/>
+        <Route path="/arLink" element={<ArLink />} />
       </Routes>
     </div>
   );

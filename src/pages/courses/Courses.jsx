@@ -60,7 +60,7 @@ const Courses = () => {
                   <img src={vektor} alt="vektor" /> <span>3.4k</span>
                 </div>
                 <p className="i_bar">
-                  <FaStar /> <h4>4.9</h4>
+                  <FaStar /> <span>4.9</span>
                 </p>
               </div>
               <div className="left">
@@ -77,7 +77,7 @@ const Courses = () => {
                 </div>
                 <MdKeyboardArrowRight />
               </div>
-              <div className=" leftdiv2">
+              <div className="leftdiv2">
                 <h3>About Course</h3>
                 <p>
                   This course is related to ipsum dolor sit amet, consectetur
@@ -101,6 +101,8 @@ const Courses = () => {
                 <img src={peoples} alt="peopes" />
               </div>
             </div>
+
+            {/* ? Modal */}
             <Button
               type="submit"
               variant="contained"
@@ -110,115 +112,112 @@ const Courses = () => {
             </Button>
             {/* ? modal */}
             {/* ? */}
-            <div
-              className="z-index"
-              style={{ display: isModalOpen ? "block" : "none" }}
-              onClick={handleCloseModal}
-            >
-              {" "}
-              {handleCloseModal}
-            </div>
-            {/* Modal */}
-            <div
-              className="modal"
-              data-aos="fade-up"
-              style={{ display: isModalOpen ? "block" : "none" }}
-            >
-              <h3>Registration</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                temporibus placeat saepe harum explicabo laboriosam error, ipsam
-                sunt nisi. Dolores distinctio harum consequatur ipsam expedita
-                ipsa vero doloribus, totam aut?
-              </p>
-              <form className="contact">
-                {/* Inputs */}
-                <TextField
-                  className="textField"
-                  id="fullname-basic"
-                  label="Full name"
-                  variant="outlined"
-                  type="text"
-                  name="fullname"
-                  placeholder="Full name"
-                  required
-                />
-                <br />
-                <br />
-                <TextField
-                  className="textField"
-                  id="phone-basic"
-                  label="Phone number"
-                  variant="outlined"
-                  type="number"
-                  name="phone"
-                  placeholder="Phone_number"
-                  required
-                  pattern="[0-9]{9,13}"
-                  title="Please enter a valid phone number"
-                />
-                <br />
-                <br />
-                {/* Select Options */}
-                <select id="course" name="course" required>
-                  <option value="" disabled selected>
-                    Choose course
-                  </option>
-                  <option value="Frontend">Frontend</option>
-                  <option value="Backend">Backend</option>
-                  <option value="Foundation">Foundation</option>
-                  <option value="SMM">SMM</option>
-                  <option value="Robototexnika">Robototexnika</option>
-                  <option value="Android">Android</option>
-                  <option value="Graphic Design">Graphic Design</option>
-                  <option value="Computer Literacy">Computer Literacy</option>
-                  <option value="Computer Literacy Kids">
-                    Computer Literacy Kids
-                  </option>
-                </select>
-                <br />
-                <br />
-                <select id="days" name="days" required>
-                  <option value="" disabled selected>
-                    Choose days
-                  </option>
-                  <option value="Juft kunlar">Juft kunlar</option>
-                  <option value="Toq kunlar">Toq kunlar</option>
-                </select>
-                <br />
-                <br />
-                <select id="hours" name="hours" required>
-                  <option value="" disabled selected>
-                    Choose hours
-                  </option>
-                  <option value="tushlikgacha">tushlikgacha</option>
-                  <option value="tushlikdan keyin">tushlikdan keyin</option>
-                </select>
-                <br />
-                <br />
-                <TextField
-                  className="textField"
-                  id="comment-basic"
-                  label="Leave a comment"
-                  variant="outlined"
-                  type="text"
-                  name="comment"
-                  placeholder="Leave a comment"
-                  multiline
-                  rows={4}
-                  fullWidth
-                />
-                <br />
-                <br />
-                {/* Submit Button */}
-                <Button
-                  style={{ marginTop: "10px" }}
-                  type="submit"
-                  variant="contained"
-                >
-                  Send
-                </Button>
-              </form>
+            <div>
+              <div
+                className="z-index"
+                style={{ display: isModalOpen ? "block" : "none" }}
+                onClick={handleCloseModal}
+              >
+                {" "}
+                {handleCloseModal}
+              </div>
+              {/* Modal */}
+              <div
+                className="modal"
+                data-aos="fade-up"
+                style={{ display: isModalOpen ? "block" : "none" }}
+              >
+                <h3>Registration</h3>
+
+                <form className="contact">
+                  {/* Inputs */}
+                  <TextField
+                    className="textField"
+                    id="fullname-basic"
+                    label="Full name"
+                    variant="outlined"
+                    type="text"
+                    name="fullname"
+                    placeholder="Full name"
+                    required
+                  />
+                  <br />
+                  <br />
+                  <TextField
+                    className="textField"
+                    id="phone-basic"
+                    label="Phone number"
+                    variant="outlined"
+                    type="number"
+                    name="phone"
+                    placeholder="Phone_number"
+                    required
+                    pattern="[0-9]{9,13}"
+                    title="Please enter a valid phone number"
+                  />
+                  <br />
+                  <br />
+                  {/* Select Options */}
+                  <select id="course" name="course" required>
+                    <option value="" disabled selected>
+                      Choose course
+                    </option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Foundation">Foundation</option>
+                    <option value="SMM">SMM</option>
+                    <option value="Robototexnika">Robototexnika</option>
+                    <option value="Android">Android</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Computer Literacy">Computer Literacy</option>
+                    <option value="Computer Literacy Kids">
+                      Computer Literacy Kids
+                    </option>
+                  </select>
+                  <br />
+                  <br />
+                  <select id="days" name="days" required>
+                    <option value="" disabled selected>
+                      Choose days
+                    </option>
+                    <option value="Juft kunlar">Juft kunlar</option>
+                    <option value="Toq kunlar">Toq kunlar</option>
+                  </select>
+                  <br />
+                  <br />
+                  <select id="hours" name="hours" required>
+                    <option value="" disabled selected>
+                      Choose hours
+                    </option>
+                    <option value="tushlikgacha">tushlikgacha</option>
+                    <option value="tushlikdan keyin">tushlikdan keyin</option>
+                  </select>
+                  <br />
+                  <br />
+                  <TextField
+                    className="textField"
+                    id="comment-basic"
+                    label="Leave a comment"
+                    variant="outlined"
+                    type="text"
+                    name="comment"
+                    placeholder="Leave a comment"
+                    multiline
+                    rows={4}
+                    fullWidth
+                  />
+                  <br />
+                  <br />
+                  {/* Submit Button */}
+                  <Button
+                    style={{ marginTop: "10px" }}
+                    type="submit"
+                    variant="contained"
+                  >
+                    Send
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         ))}

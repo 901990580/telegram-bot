@@ -1,0 +1,22 @@
+.arlink {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.arlink_dis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arlink_img {
+    background-color: #f9f9f9;
+    padding: 10px;   
+}
+
+.arlink_img img {
+    border-radius: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}

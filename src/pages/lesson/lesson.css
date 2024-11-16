@@ -1,74 +1,93 @@
+/* lesson.css */
+
 .lesson {
-    margin-bottom: 10px;
+  padding: 24px;
 }
 
 .lesson_header {
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:  12px 16px;
+  padding: 20px;
 }
 
 .lesson_header h2 {
-  font-weight: 700;
   font-size: 24px;
+  font-weight: 700;
   color: var(--blue);
 }
 
 .lesson_header button {
-  object-fit: cover;
-  padding: 10px;
-  border: 1px solid rgb(234, 234, 234);
-  border-radius: 8px;
-  background-color: var(--white);
+
+  background: transparent;
+  padding: 9px;
+  border-radius: 9px;
+  border: 1.13px solid #D2D1D4;
+  cursor: pointer;
 }
 
 .courses {
-    background-color: var(--f9);
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.courses_display {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Top Courses */
+.top_courses {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.courses_display p {
-    color: var(--blue);
+.top_courses .courses_display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_courses h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.top_courses p {
+  color: yellow;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .top_courses_img {
-    margin-top: 10px;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .top_courses_p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--white);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .top_courses_p .p {
-    color: var(--blue);
-}
-
-.top_courses_p p {
-    color: yellow;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
 }
 
 .top_courses_p span {
-    color: #000;
+  font-weight: 700;
+  color: #615e69;
 }
 
-.bottom_courses {
-    margin-top: 20px;
+.top_courses_p .p {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.courses_display p{
+    color: #615e69;
 }
