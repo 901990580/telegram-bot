@@ -20,16 +20,12 @@
 }
 
 .back-button {
-  background: transparent;
-  border: none;
-  font-size: 26px;
-  color: #333;
+  background-color: transparent;
+  border: 1px solid #d2d1d4;
+  padding: 9px;
+  border-radius: 9px;
+  font-size: 20px;
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.back-button:hover {
-  color: var(--blue);
 }
 
 /* Teacher Info */

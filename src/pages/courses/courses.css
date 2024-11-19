@@ -21,6 +21,15 @@ p:hover {
   font-weight: 700;
 }
 
+.back-button {
+  background-color: transparent;
+  border: 1px solid #d2d1d4;
+  padding: 9px;
+  border-radius: 9px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .i_bar {
   display: flex;
   justify-content: space-between;

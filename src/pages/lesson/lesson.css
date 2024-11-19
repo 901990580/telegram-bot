@@ -18,11 +18,11 @@
 }
 
 .lesson_header button {
-
   background: transparent;
   padding: 9px;
   border-radius: 9px;
   border: 1.13px solid #D2D1D4;
+  font-size: 20px;
   cursor: pointer;
 }
 

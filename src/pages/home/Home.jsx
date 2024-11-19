@@ -60,14 +60,6 @@ const Home = () => {
     navigate("/ArLink");
   };
 
-  const LocationFunc = () => {
-    navigate("/Location");
-  };
-
-  const ResultFunc = () => {
-    navigate("/Result");
-  };
-
   return (
     <div className="container">
       {/* ? imgs texts */}

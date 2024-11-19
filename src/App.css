@@ -19,7 +19,7 @@
 .App {
   font-optical-sizing: auto;  
   max-width: 500px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .content {
@@ -31,17 +31,15 @@
   font-weight: 700;
   font-size: 36px;
   color: var(--blue);
-  margin-bottom: 20px; 
 }
 
 .content_head img {
   width: 170px;
-  margin-bottom: 30px; 
 }
 
 .content img {
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .img {
@@ -59,3 +57,4 @@
   background-color: var(--blue);
   color: var(--white);
 }
+
