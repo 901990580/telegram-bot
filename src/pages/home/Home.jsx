@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 // ? xarita
 import "leaflet/dist/leaflet.css";
-// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-// import Box from '@mui/material/Box';
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 // ? react icons
@@ -53,7 +51,7 @@ const Home = () => {
   };
 
   const AboutUsFunc = () => {
-    navigate("/AboutUs");
+    navigate("/about");
   };
 
   const ArFunc = () => {

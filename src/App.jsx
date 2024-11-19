@@ -13,6 +13,7 @@ import Standard from "./pages/standard/Standard";
 import Courses from "./pages/courses/Courses";
 import TeacherAbout from "./pages/teacherAbout/TeacherAbout";
 import ArLink from "./pages/arlink/ArLink";
+import About from "./pages/about/About";
 
 function App() {
   let navigate = useNavigate();
@@ -47,6 +48,7 @@ function App() {
           }
         />
         <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About/>}/>
         <Route path="/lesson" element={<Lesson />} />
         <Route path="/standard" element={<Standard />} />
         <Route path="/courses" element={<Courses />} />

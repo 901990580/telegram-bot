@@ -79,7 +79,7 @@
 .cart_standart .i_bar {
   display: flex;
   align-items: center;
-  color: #ffd700; /* Gold color for star rating */
+  color: #ffd700; 
 }
 
 .cart_standart .i_bar span {
