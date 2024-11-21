@@ -55,7 +55,7 @@
 
 .image2 {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
   border-top-left-radius: 10px;
@@ -72,7 +72,7 @@
 .cart_standart h2 {
   color: #060a90;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 15px;
 }
 
@@ -93,7 +93,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 5px;
 }
 
 .result_div3 div {
@@ -117,6 +117,6 @@
 
 .result_div3 h3 {
   font-weight: 800;
-  font-size: 18px;
+  font-size: 12px;
   color: #18ba92;
 }

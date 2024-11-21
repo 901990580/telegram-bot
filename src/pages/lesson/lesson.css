@@ -24,6 +24,7 @@
   border: 1.13px solid #D2D1D4;
   font-size: 20px;
   cursor: pointer;
+  color: var(--blue);
 }
 
 .courses {
@@ -53,7 +54,6 @@
 
 .top_courses p {
   color: yellow;
-  font-size: 20px;
   cursor: pointer;
 }
 
@@ -72,7 +72,6 @@
 }
 
 .top_courses_p .p {
-  font-size: 14px;
   font-weight: 400;
   color: #555;
 }

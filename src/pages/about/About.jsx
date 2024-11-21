@@ -4,8 +4,8 @@ import "./about.css";
 // ? import img
 import about_1 from "../../assets/menu_1.jpg";
 import logo from "../../assets/logo_2.png";
-import swiper from "../../assets/swiper.png"
-import swiper1 from "../../assets/swiper1.png"
+import swiper from "../../assets/swiper.png";
+import swiper1 from "../../assets/swiper1.png";
 
 // ? swiper
 import { Swiper, SwiperSlide } from "swiper/react";

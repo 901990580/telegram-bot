@@ -1,5 +1,4 @@
 import React from "react";
-import lesson_img from "../../assets/lesson_img.png";
 import top_courses_img from "../../assets/top_courses_img.png";
 import javascript from "../../assets/javascript.png";
 import { FaStar } from "react-icons/fa";
@@ -7,21 +6,31 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "./lesson.css";
 
+// ? icons
+import { FaHome } from "react-icons/fa";
+import { FaBell } from "react-icons/fa";
+
 const Lesson = () => {
   const navigate = useNavigate();
 
-  // Navigate to the Standard courses page
   const standardFunc = () => {
     navigate("/standard");
   };
+
+  function leftIconFunc() {
+    navigate(-1);
+  }
 
   return (
     <div className="lesson">
       {/* Lesson header */}
       <div className="lesson_header">
+        <button className="back-button" onClick={leftIconFunc}>
+          <FaHome />
+        </button>
         <h2>Home</h2>
-        <button>
-          <img src={lesson_img} alt="Lesson" />
+        <button className="back-button">
+          <FaBell />
         </button>
       </div>
 
