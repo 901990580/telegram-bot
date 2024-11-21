@@ -3,10 +3,11 @@ import "./App.css";
 import logo from "./assets/logo 1.jpg";
 import animation from "./assets/animation.gif";
 import { Button } from "@mui/material";
-// ? import aos
+// ? import aos 
 import AOS from "aos";
-import "aos/dist/aos.css"; // AOS stilini import qilish
+import "aos/dist/aos.css";
 import { useEffect } from "react";
+// ? Pages
 import Home from "./pages/home/Home";
 import Lesson from "./pages/lesson/Lesson";
 import Standard from "./pages/standard/Standard";
@@ -29,13 +30,7 @@ function App() {
   }, []);
 
   return (
-    <div
-      className="App"
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="300"
-      data-aos-offset="0"
-    >
+    <div className="App" data-aos="zoom-in-up">
       <Routes>
         <Route
           path="/"
@@ -53,7 +48,7 @@ function App() {
           }
         />
         <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About/>}/>
         <Route path="/lesson" element={<Lesson />} />
         <Route path="/standard" element={<Standard />} />
         <Route path="/courses" element={<Courses />} />
