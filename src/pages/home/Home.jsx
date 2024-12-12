@@ -14,14 +14,34 @@ import home_2 from "../../assets/menu_2.jpeg";
 import link from "../../assets/link.png";
 import logo from "../../assets/logo_2.png";
 import "./home.css";
+import axios from "axios";
 
 const Home = () => {
   let navigate = useNavigate();
+  // ? Post
+  let [name, setName] = useState("");
+  let [phone, setPhone] = useState("");
   const [formData, setFormData] = useState({
     fullname: "",
     phone: "",
     course: "",
   });
+
+  let addStudent = () => {
+    axios
+      .post("http://194.163.171.25:9000/api/contact-us/", {
+        full_name: name,
+        phone_number: phone,
+        choice_course: "qwerty",
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log(name, phone);
+      });
+  };
 
   // Handlers
   const handleChange = (e) => {
@@ -33,13 +53,13 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.fullname || !formData.phone || !formData.course) {
+    if (!name || !phone || !formData.course) {
       alert("Please fill in all fields!");
     } else {
       alert("Form submitted successfully!");
-      // Reset form
+
       setFormData({
-        fullname: "",
+        name: "",
         phone: "",
         course: "",
       });
@@ -105,8 +125,8 @@ const Home = () => {
                 variant="outlined"
                 type="text"
                 name="fullname"
-                value={formData.fullname}
-                onChange={handleChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Full name"
                 required
                 aria-label="Full name"
@@ -120,8 +140,8 @@ const Home = () => {
                 variant="outlined"
                 type="tel"
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 placeholder="Phone number"
                 required
                 pattern="[0-9]{9,13}"
@@ -157,7 +177,7 @@ const Home = () => {
               <br />
               <br />
               {/*  click button */}
-              <Button type="submit" variant="contained">
+              <Button onClick={addStudent} type="submit" variant="contained">
                 Send
               </Button>
             </form>

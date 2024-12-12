@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./arLink.css";
 import { useNavigate } from "react-router-dom";
 
-// ? import img
-import link from "../../assets/image.png"
-import link1 from "../../assets/link.png"
-import link2 from "../../assets/image1.png"
-
-
 // ? import icons
 import { IoMdArrowDropleft } from "react-icons/io";
+import axios from "axios";
 
 const ArLink = () => {
+  let [get, setGet] = useState([]);
+
   let navigate = useNavigate();
+
+  const getDate = () => {
+    axios
+      .get("http://194.163.171.25:9000/api/ar-links/")
+      .then((response) => {
+        setGet(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    getDate(); // Ma'lumotlarni olishni amalga oshiradi
+  }, []);
 
   function leftIconFunc() {
     navigate(-1);
@@ -27,11 +39,14 @@ const ArLink = () => {
         <div></div>
       </div>
 
-      <div className="arlink_img">
-          <img src={link} alt="link" />
-          <img src={link1} alt="link" />
-          <img src={link2} alt="link" />
-      </div>
+      <ul>
+        {get.map((item) => (
+          <li>
+            <img src={item.image} alt="" />
+            <p>{item.url}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 // ? import aos 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // ? Pages
 import Home from "./pages/home/Home";
 import Lesson from "./pages/lesson/Lesson";
@@ -48,7 +48,7 @@ function App() {
           }
         />
         <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About/>}/>
+        <Route path="/about" element={<About />}/>
         <Route path="/lesson" element={<Lesson />} />
         <Route path="/standard" element={<Standard />} />
         <Route path="/courses" element={<Courses />} />

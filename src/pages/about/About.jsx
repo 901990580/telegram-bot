@@ -1,63 +1,84 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./about.css";
 
-// ? import img
+// Import images
 import about_1 from "../../assets/menu_1.jpg";
 import logo from "../../assets/logo_2.png";
-import swiper from "../../assets/swiper.png";
 import swiper1 from "../../assets/swiper1.png";
 
-// ? swiper
+// Swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-// Import Swiper modules
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
-// ? react icons
+// React Router
 import { useNavigate } from "react-router-dom";
+
+// Icons
 import { IoMdArrowDropleft } from "react-icons/io";
 import { FaYoutube, FaTelegramPlane, FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaStar } from "react-icons/fa6";
+import axios from "axios";
 
 const About = () => {
-  let navigate = useNavigate();
+  const [get, setGet] = useState([]);
 
-  // Sahifaga orqaga qaytish
-  let leftFunc = () => {
-    navigate(-1); // Orqaga qaytish
+  const navigate = useNavigate();
+
+  const getDate = () => {
+    axios
+      .get("http://194.163.171.25:9000/api/instructors/")
+      .then((response) => {
+        setGet(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    getDate(); // Ma'lumotlarni olishni amalga oshiradi
+  }, []);
+
+  const teacherAbout = () => {
+    navigate("/teacherAbout");
+  };
+
+  // Navigate back
+  const handleBack = () => {
+    navigate(-1);
   };
 
   return (
     <div className="about">
+      {/* Header */}
       <div className="about_header">
-        <button className="back-button" onClick={leftFunc}>
+        <button className="back-button" onClick={handleBack}>
           <IoMdArrowDropleft />
         </button>
         <h3>About Us</h3>
         <div></div>
       </div>
 
-      <img src={about_1} alt="" />
+      <img src={about_1} alt="About us" className="about_banner" />
 
+      {/* Team Information */}
       <div className="about_div">
         <div className="about_atribut">
-          <h3>About Our Team </h3>
+          <h3>About Our Team</h3>
           <p>
-            Our team members are the most talanted to ipsum dolor sit amet,
-            consectetur adipiscing elit. Morbi ut nisl quis massa congue tempus.
-            Fusce placerat justo ac mauris ultricies viverra. Phasellus feugiat
-            enim tellus
+            Our team members are highly talented and experienced professionals.
+            We strive to deliver excellence through collaboration and
+            innovation.
           </p>
         </div>
 
+        {/* Team Members */}
         <div className="slider_about">
-          <h3>Our Team Member</h3>
+          <h3>Our Team Members</h3>
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -66,15 +87,22 @@ const About = () => {
             modules={[FreeMode, Pagination, Autoplay]}
             className="mySwiper"
           >
-            {[...Array(8)].map((_, index) => (
-              <SwiperSlide key={index}>
-                <div className="peopleCart">
-                  <img src={swiper} alt="Team Member" />
-                  <h3>Alijon Sobirov</h3>
-                  <p>SMM Designer</p>
-                </div>
-              </SwiperSlide>
-            ))}
+            <ul>
+              {get.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <li className="peopleCart">
+                    <img
+                      src={item.photo}
+                      alt={item.full_name}
+                      onClick={teacherAbout}
+                    />
+                    <h3>{item.full_name}</h3>
+                    <p>{item.position}</p>
+                    <p>Experience: {item.experience}</p>
+                  </li>
+                </SwiperSlide>
+              ))}
+            </ul>
           </Swiper>
         </div>
 
@@ -97,22 +125,21 @@ const About = () => {
                       <h3>Robert Fox</h3>
                       <p>@alessandroveronezi</p>
                       {[...Array(5)].map((_, starIndex) => (
-                        // <i key={starIndex} className="bx bxs-star"></i>
-                        <FaStar />
+                        <FaStar key={starIndex} className="star-icon" />
                       ))}
                     </div>
                   </div>
                   <p>
                     While Corfu gives us the ability to shoot by the sea with an
-                    amazing blue background full of light from the sky, Florina
-                    gives us its gentle side.
+                    amazing blue background, Florina brings a gentle and warm
+                    vibe.
                   </p>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-
+        {/* Location */}
         <div className="cart_4">
           <h3>Our Location</h3>
           <p>Vokzal IT TAT</p>
@@ -127,7 +154,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* ? Footer */}
+      {/* Footer */}
       <footer>
         <div className="footer_1">
           <img src={logo} alt="Logo" />
@@ -139,10 +166,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="bottom"></div>
-
         <div className="footer_bottom">
-          <h2>Bu yerda qandaydir ma’noli shior yozilgan bo’ladi</h2>
+          <h2>A meaningful slogan goes here</h2>
 
           <div className="footer_about">
             <h3>About</h3>
